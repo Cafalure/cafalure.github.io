@@ -3,117 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Compagnie des Lutins</title>
+    <title>L'univers de Léo</title>
     <style>
-        /* Le fond et la police */
-        body { 
-            font-family: 'Arial', sans-serif; 
-            background: linear-gradient(135deg, #0f0f13 0%, #1a1a22 100%); 
-            color: #fff; 
-            text-align: center; 
-            padding: 40px 20px; 
-            margin: 0; 
-            min-height: 100vh;
-        }
-        
-        /* La boule magique à la place de la photo */
-        .magic-circle {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 20px auto;
-            border-radius: 50%;
-            background: linear-gradient(45deg, #4a6cf7, #e94560);
-            box-shadow: 0 0 30px rgba(74, 108, 247, 0.6), 0 0 60px rgba(233, 69, 96, 0.4);
-            animation: pulse 3s infinite alternate;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-        }
-
-        /* Animation de la boule */
-        @keyframes pulse {
-            0% { transform: scale(1); box-shadow: 0 0 30px rgba(74, 108, 247, 0.6); }
-            100% { transform: scale(1.05); box-shadow: 0 0 50px rgba(233, 69, 96, 0.8); }
-        }
-
-        /* Les titres */
-        h1 { 
-            color: #fff; 
-            font-size: 2.2rem; 
-            margin-bottom: 5px; 
-            text-shadow: 0 0 15px rgba(255, 255, 255, 0.3); 
-        }
-        h2 { 
-            color: #aaa; 
-            font-size: 1.2rem; 
-            font-weight: normal; 
-            margin-top: 0; 
-            margin-bottom: 35px; 
-            font-style: italic; 
-        }
-
-        /* La zone des boutons */
-        .container { 
-            max-width: 400px; 
-            margin: 0 auto; 
-            background: rgba(26, 26, 34, 0.6); 
-            padding: 30px 20px; 
-            border-radius: 20px; 
-            border: 1px solid #2e2e3e;
-            backdrop-filter: blur(10px);
-        }
-
-        /* Le style des boutons */
-        a { 
-            display: block; 
-            background: #1a1a22; 
-            color: #e8e8f0; 
-            padding: 18px; 
-            margin: 15px 0; 
-            text-decoration: none; 
-            border-radius: 12px; 
-            font-weight: bold; 
-            font-size: 1.1rem; 
-            border: 2px solid #2e2e3e; 
-            transition: all 0.3s ease; 
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Effet au survol */
-        a:hover { 
-            background: #e94560; 
-            color: #fff; 
-            border-color: #e94560; 
-            transform: translateY(-3px) scale(1.02); 
-            box-shadow: 0 10px 20px rgba(233, 69, 96, 0.3);
-        }
-
-        /* Le pied de page */
-        .footer { 
-            margin-top: 40px; 
-            font-size: 0.8rem; 
-            color: #666; 
-        }
+        body { font-family: 'Arial', sans-serif; background: #0f0f13; color: #fff; text-align: center; padding: 40px 20px; margin: 0; }
+        h1 { color: #4a6cf7; font-size: 2rem; margin-bottom: 30px; text-shadow: 0 0 10px rgba(74,108,247,0.5); }
+        .container { max-width: 400px; margin: 0 auto; }
+        a { display: block; background: #1a1a22; color: #e8e8f0; padding: 18px; margin: 15px 0; text-decoration: none; border-radius: 12px; font-weight: bold; font-size: 1.1rem; border: 2px solid #2e2e3e; transition: all 0.3s ease; }
+        a:hover { background: #e94560; color: #fff; border-color: #e94560; transform: scale(1.05); }
+        /* Bouton pack mis en avant */
+        a.pack { background: linear-gradient(135deg, #e94560, #4a6cf7); border-color: #e94560; font-size: 1.15rem; padding: 22px; box-shadow: 0 0 20px rgba(233,69,96,0.4); }
+        a.pack:hover { background: linear-gradient(135deg, #ff5a75, #5a7cff); transform: scale(1.07); }
+        a.pack .pack-title { display: block; font-size: 1.2rem; margin-bottom: 4px; }
+        a.pack .pack-btn { display: inline-block; background: #fff; color: #e94560; padding: 6px 18px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; margin-top: 10px; }
+        .pack-hint { font-size: 0.8rem; color: #aaa; margin-top: -5px; margin-bottom: 15px; }
+        .footer { margin-top: 40px; font-size: 0.8rem; color: #666; }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- La boule magique avec l'étoile -->
-        <div class="magic-circle">🌙</div>
-        
-        <h1>La Compagnie des Lutins</h1>
-        <h2>L'Univers de Léo</h2>
-        
+        <h1>🌙 L'Univers de Léo</h1>
+
+        <a href="https://cafalure.gumroad.com/l/lacompagniedeslutins" target="_blank" class="pack">
+            <span class="pack-title">🚀 Le Pack des 3 Générateurs</span>
+            <span class="pack-btn">🛒 Acheter maintenant</span>
+        </a>
+        <p class="pack-hint">3 générateurs · vidéos, images, voix</p>
+
         <a href="https://www.amazon.fr/dp/B0HPCP91X2" target="_blank">📚 Découvrir le livre sur Amazon</a>
-        
-        <a href="https://cafalure.gumroad.com/l/lacompagniedeslutins" target="_blank">🚀 Créer tes propres animations (Pack)</a>
-        
+
         <a href="https://www.youtube.com/@Cafalure" target="_blank">🎬 Regarder les aventures sur YouTube</a>
 
-        <a href="https://www.tiktok.com/@cafalure4" target="_blank">📱 Suivre Léo sur TikTok</a>
-        
         <div class="footer">
             © 2026 La Compagnie des Lutins
         </div>
